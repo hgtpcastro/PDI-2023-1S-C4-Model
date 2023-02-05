@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+skinparam packageStyle rect
+actor cliente
+actor atendente
+rectangle checkout {
+  cliente -- (caixa)
+  (caixa) .> (pagamento) : include
+  (ajuda) .> (caixa) : extends
+  (caixa) -- atendente
+}
+@enduml
